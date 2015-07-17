@@ -7,6 +7,14 @@ html, body {
   background-color: #007AB6;
 }
 
+#sideText {
+    color:#fff;
+}
+
+a{
+    display: block;
+}
+
 #title-bar {
   text-align: center;
   display: table;
@@ -35,6 +43,12 @@ html, body {
 }
 
 #side-bar {
+  height:100%;
+  width: 13%;
+  float: left;
+}
+
+#side-text {
   height:100%;
   width: 13%;
   float: left;
@@ -159,4 +173,12 @@ html, body {
 
 .hidden {
   display: none;
+}
+
+.white-text {
+     color: white;
+  margin: 5%;
+  margin-top: 0;
+  padding: 5%;
+  
 }
