@@ -1,72 +1,47 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <html>
-<head>
-    <title>Page Title</title>
+  <head>
+    <title>ANZ Championship</title>
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/home.css">
+    <link rel="stylesheet" type="text/css" href="style/pie.css">
+    <link rel="stylesheet" type="text/css" href="style/chord.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://documentcloud.github.io/underscore/underscore-min.js"></script>
 
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-</head>
-<body>
-<!-- Start of first page -->
-<div data-role="page" id="foo">
+    <script type="text/javascript" src="js/data.js"></script>
 
-    <div data-role="header">
-        <h1>Foo</h1>
-    </div><!-- /header -->
+    <script type="text/javascript" src="js/pie_controller.js"></script>
+    <script type="text/javascript" src="js/chord_controller.js"></script>
 
-    <div role="main" class="ui-content">
+    <script type="text/javascript" src="js/pie.js"></script>
+    <script type="text/javascript" src="js/chord.js"></script>
 
-        <label for="text-1">Get a quote:</label>
-        <input name="text-1" id="text1" value="1" type="text">
-        <input type="submit" value="Submit Button" id="button1" />
-
-	<!-- put the result here -->
-	<div id="result"  class="functions"></div>
-
-        <label for="text-2">Add a new quote:</label>
-        <input type="submit" value="Submit Button" id="button2" />
-
-    </div><!-- /content -->
-
-    <div data-role="footer">
-        <h4>Page Footer</h4>
-    </div><!-- /footer -->
-</div><!-- /page -->
-
-<script type="text/javascript">
-$(document).bind('pageinit', function() {
-
-  alert("Hello");
-
-  $.ajaxSetup ({
-    cache: false
-  });
-
-  $( "#button1" ).bind( "click", function(event, ui) {
-    var q = $("#text1").val();
-    alert("Click "+q);
-    var jsonUrl = "https://theocarr.herokuapp.com/quote/" + q;
-    alert("Fetching result from "+jsonUrl);
-    $.get(jsonUrl, function(data) {
-      alert(data.author);
-      $("#result").html("<p><b>"+data.author+" said "+data.text+"</b></p>")
-    }, 'json');
-  });
-
-
-  $( "#button2" ).bind( "click", function(event, ui) {
-    alert("Posting a new quote");
-    var jsonUrl = "https://theocarr.herokuapp.com/quote/";
-    var newQuote = { "author" : "foo", "text" : "some text" };
-    $.post(jsonUrl, newQuote, function(data) {
-      alert("Added quote number " + data.pos + " " + data.author + " " + data.text);
-    }, 'json');
-  });
-
-});
-</script>
-</body>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body class="noselect">
+    <div id="title-bar">
+      <img src="http://www.anz-championship.com/Portals/6/anz_champ_logo.png" />
+      <h1>ANZ Championship</h1>
+    </div>
+    <div id="page-content">
+      <div id="side-bar">
+        <div id="home-button" class="styled-button tab-button">
+          <span>Main</span>
+        </div>
+        <div id="pie-button" class="styled-button tab-button">
+          <span>Team Wins</span>
+        </div>
+        <div id="chord-button" class="styled-button tab-button">
+          <span>Team Goals</span>
+        </div>
+      </div>
+      <div id="partial-content">
+      </div>
+    </div>
+  </body>
 </html>

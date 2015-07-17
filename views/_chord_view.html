@@ -1,0 +1,68 @@
+<div id="chord-diagram" class="vis-content">
+  <svg></svg>
+</div>
+<div class="options-content">
+  <div class="options-panel">
+    <h3>Years:</h3>
+    <div class="option-content">
+      <table id="years"><tbody></tbody></table>
+    </div>
+
+    <h3>Game Types:</h3>
+    <ul id="game-types">
+      <li>
+        <div id="games-non-final" class="styled-button games-button">
+          Non-Finals Only
+        </div>
+      </li>
+      <li>
+        <div id="games-final" class="styled-button games-button">
+          Finals Only
+        </div>
+      </li>
+      <li>
+        <div id="games-both" class="styled-button games-button">
+          Both
+        </div>
+      </li>
+    </ul>
+
+    <h3>Matches:</h3>
+    <ul>
+      <li>
+        <div class="side-by-side-container">
+          <div id="teams-nz" class="styled-button teams-button">
+            NZ Domestic
+          </div>
+          <div id="teams-au" class="styled-button teams-button">
+            AU Domestic
+          </div>
+        </div>
+      </li>
+      <li>
+        <div id="teams-int" class="styled-button teams-button">
+          International Games
+        </div>
+      </li>
+      <li>
+        <div id="teams-all" class="styled-button teams-button">
+          All Games
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div id="tooltip"></div>
+
+  <div id="tip" class="fade hide">
+    <span></span>
+  </div>
+</div>
+
+<!-- the following is hidden and contains the text for the context tips -->
+<div id="chord-tip" class="hidden">
+  This chord represents the goals scored between the two connected teams. The size of each end shows how many goals were scored by that team against the other as a proportion of that teams total goals. The chord is coloured according to who scored the most goals against the other team.
+</div>
+<div id="team-tip" class="hidden">
+  This segment represents the proportion of goals scored by this team out of all the teams in the diagram. The bigger the segment, the more goals that the team scored. The size of the chords coming out of the segment show how many goals the team scored against the other team that the chord connects to. If the team scored alot of goals against another team, the connecting end of a chord will be large.
+</div>
