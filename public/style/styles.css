@@ -56,3 +56,20 @@ body {
 ul.nav a:hover { color: #fff !important; background-color:#5ab5f7 !important; }
 
 ul.nav a:focus { color: #fff !important; background-color:#5ab5f7 !important; }
+
+div.tooltip-inner {
+    text-align: left;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    margin-bottom: 6px;
+    background-color: #505050;
+    font-size: 14px;
+}
+
+
+
+.popover{
+        max-width:600px;
+        min-width:250px;
+    }
