@@ -4,7 +4,8 @@ var tweetText;
 var tweetUser;
 
 PUBNUB.init({
-    subscribe_key: 'sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe'
+    subscribe_key: 'sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe',
+    ssl : (('https:' == document.location.protocol) ? true : false)
 }).subscribe({
     channel: 'pubnub-twitter',
     message:  function(msg){ console.log(msg) },
