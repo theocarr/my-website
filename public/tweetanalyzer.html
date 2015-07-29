@@ -18,10 +18,19 @@
                         
                       </div>
                      </div>
+
+                    <div class="panel panel-default">
+                      
+                      <div id="score" class="panel-body">    
+                        
+                      </div>
+                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="panel panel-default">
-                      <div id ="tweetTitle" class="panel-heading"><h3>A random tweet</h3></div>
+                      <div id ="tweetTitle" class="panel-heading">
+                          <img id ="tweetImage" src="" class="img-responsive" alt="" width="80" height="80">
+                      </div>
                       <div id="tweetText" class="panel-body">    
                         </div>
                      </div>
@@ -33,15 +42,47 @@
 
 
         <div class ="container">
-            <div class ="row">
-                <div class="col-md-4">
-                     </div>
-                <div class="col-md-4">
-                    <button id ="newTweetButton" type="button" class="btn btn-primary">New Tweet</button>
+            <div class ="row" style="margin-bottom:6px">
+               <div class="col-md-4">
                 </div>
                 <div class="col-md-4">
+                    <h3>Who tweeted this?</h3>
+                </div>
+                <div class="col-md-4">
+                </div> 
+            </div>
+
+            <div class ="row" style="margin-bottom:6px">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="col-md-4">
+                            <label id ="optRadio1"><input type="radio" name="optradio" >Option 1</label>   
+                        </div>
+                        <div class="col-md-4">
+                            <label id ="optRadio2"><input type="radio" name="optradio" >Option 2</label>    
+                        </div>
+                        <div class="col-md-4">
+                            <label id ="optRadio3"><input type="radio" name="optradio">Option 3</label>
+                        </div>
+                     </div>
+                    
+                </div>
+                <div class="col-md-4">
+                     
                 </div>
             </div>
+
+            <div class ="row">
+                <div class="col-md-4">     
+                        </div>
+                <div class="col-md-4">
+                        <button id ="newTweetButton" type="button" class="btn btn-success">Guess!</button>
+                        </div>
+                    <div class="col-md-4">    
+                      </div>
+               </div>
         </div>
       <script src="js/jquery-1.11.3.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
