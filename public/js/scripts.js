@@ -84,7 +84,7 @@ $('#twitterAnalyzerPanel').mouseover(function () {
     $('#twitterAnalyzerPanel').css("box-shadow", " 0 0 5px black");
 
 }).mouseout(function () {
-    $('#TwitterAnalyzerPanel').css("box-shadow", " 0 0 0px black");
+    $('#twitterAnalyzerPanel').css("box-shadow", " 0 0 0px black");
 });
 
 $('#cluedoPanel').mouseover(function () {
